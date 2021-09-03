@@ -56,6 +56,8 @@ const cardAppender = (selector) => {
       const javascriptArray = results.data.articles.javascript;
       const bootstrapArray = results.data.articles.bootstrap;
       const technologyArray = results.data.articles.technology;
+      const jqueryArray = results.data.articles.jquery;
+      const nodeArray = results.data.articles.node;
       
       //console.log("javascript: ", javascriptArray);
       javascriptArray.forEach(object => {
@@ -73,6 +75,20 @@ const cardAppender = (selector) => {
 
       });
       technologyArray.forEach(object => {
+        //console.log(object);
+        const newCard = Card(object);
+        
+        document.querySelector(selector).appendChild(newCard);
+
+      });
+      jqueryArray.forEach(object => {
+        //console.log(object);
+        const newCard = Card(object);
+        
+        document.querySelector(selector).appendChild(newCard);
+
+      });
+      nodeArray.forEach(object => {
         //console.log(object);
         const newCard = Card(object);
         
